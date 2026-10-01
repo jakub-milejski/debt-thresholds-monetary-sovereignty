@@ -1,0 +1,16 @@
+[project]
+name = "debt-thresholds-monetary-sovereignty"
+version = "0.1.0"
+description = "Reinhart–Rogoff debt thresholds by monetary regime: replication and extension"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.6",
+]
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "pytest>=9.1.1",
+]

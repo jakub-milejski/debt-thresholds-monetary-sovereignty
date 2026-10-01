@@ -1,0 +1,88 @@
+## Code and data are open-source under the BSD 2-clause license (http://www.tldrlegal.com/l/BSD2)
+## Michael Ash, Thomas Herndon, and Robert Pollin, April-May 2013
+
+
+Archive:  HAP-RR-GITD-code-2013-05-17.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+   468992  2013-05-17 09:43   RR.xls
+    74052  2013-05-17 09:48   RR-country-csv.zip
+     4247  2013-05-04 23:01   concordance-RR-HAP.csv
+    20963  2013-05-17 10:59   RR.R
+   598380  2013-05-17 11:00   RR-basic.dta
+   264786  2013-05-17 11:00   RR-processed.dta
+   678090  2013-05-17 11:00   RR-200-processed.dta
+    55660  2013-05-17 11:00   RR-keycolumns.xlsx
+    93206  2013-05-17 11:00   RR.Rout
+     5342  2013-04-29 06:23   RR200/RR200.R
+    13832  2013-04-29 06:23   RR200/RR200.Rout
+---------                     -------
+  2277550                     11 files
+
+RR.xls is our edit of Public_debt-ratios_advanced.xlsx, the Reinhart
+and Rogoff "working spreadsheet" provided by Carmen Reinhart on 4
+April 2013.  RR.xls includes only primitive non-derived data from the
+RR working spreadsheet, i.e., only cells that contain values and not
+formulas in the RR working spreadsheet.  In the RR working spreadsheet
+there is variation by country and year in which columns hold values
+and which columns hold formulas.  Columns for which at least some
+values were directly presented include: one or more measures of public
+debt (Debt, Debt1, Debt2, Debtalt); one or more measures of nominal
+GDP or GNI (GDP, GDPalt, GDP1, GDP2, GDP2alt, GDP3, GNI); one or more
+measures of real GDP (RGDP, RGDP1, RGDP2); one or more deflators
+(GDPI, GDPI1, GDPI2); real GDP growth (dRGDP); public debt/GDP ratio
+(debtgdp); and inflation (Infl).  We deleted a sheet that is labelled
+Hungary but is in fact a duplicate sheet for France in the RR working
+spreadsheet and consolidate into one sheet the two sheets that contain
+Finland data in the RR working spreadsheet.
+
+RR-country-csv.zip is an archive which contains all of the individual
+country sheets from RR.xls saved as comma-separated value (csv) files.
+
+concordance-RR-HAP.csv is a concordance between variable names in the
+RR working spreadsheet and the HAP data and code.
+
+RR.R is an R script file that reads the individual country csv files
+and executes all of the analysis described in Herndon, Ash, and Pollin
+"Does High Public Debt Consistently Stifle Economic Growth? A Critique
+of Reinhart and Rogoff".
+
+RR-basic.dta is a Stata data file that presents all of the primitive
+country data in a country-year dataset.  The variables are one or more
+measures of public debt (Debt, Debt1, Debt2, Debtalt); one or more
+measures of nominal GDP or GNI (GDP, GDPalt, GDP1, GDP2, GDP2alt,
+GDP3, GNI); one or more measures of real GDP (RGDP, RGDP1, RGDP2); one
+or more deflators (GDPI, GDPI1, GDPI2); real GDP growth (dRGDP);
+public debt/GDP ratio (debtgdp); and inflation (Infl).
+
+RR-processed.dta is a Stata data file that presents all of the
+primitive data and data derived from formulas in the RR working
+spreadsheet in a country-year dataset limited to 1946-2009. Variables
+are as in RR-basic.dta with the addition of lagged values for the real
+GDP series and for dRGDP and debtgdp values filled in by formula
+according to the formulas in the RR working spreadsheet.
+
+RR-200-processed.dta is a Stata data file that presents all of the
+primitive data and data derived from formulas in the RR working
+spreadsheet in a country-year dataset for the full c. 200
+span. Variables are as in RR-basic.dta with the addition of lagged
+values for the real GDP series and for dRGDP and debtgdp values filled
+in by formula according to the formulas in the RR working spreadsheet.
+These data were used in
+
+RR-keycolumns.xlsx is a spreadsheet containing the following columns:
+country; year; public debt/GDP ratio; public debt/GDP category; and
+real GDP growth.  The columns are calculated from the data and
+formulas in the Reinhart and Rogoff working spreadsheet and can be
+used, e.g., with pivot tables, to replicate the results in RR 2010 and
+HAP.
+
+RR.Rout contains the output from a run of RR.R
+
+RR200.R is the code used for some parts of the Supplemental Technical
+Critique of Reinhart and Rogoff's "Growth in a Time of Debt"
+referenced in "Debt and Growth: A Response to Reinhart and Rogoff" in
+The New York Times, April 29, 2013.
+
+RR200.Rout contains the output from a run of RR200.R
+
