@@ -1,0 +1,5 @@
+# Jednolite końce linii (LF) w repozytorium, niezależnie od systemu (Mac / Windows)
+* text=auto
+
+# Dane źródłowe: bez żadnej konwersji, bajt w bajt jak u autorów
+data/raw/** -text
