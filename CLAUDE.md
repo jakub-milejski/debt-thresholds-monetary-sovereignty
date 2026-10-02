@@ -14,6 +14,8 @@ context lives in a separate private repository (`../licencjat-mmt`, if present o
 - The author is a Python beginner (learning since August 2026). **The author writes the code; Claude
   guides one step at a time**, explains, gives hints and checks results. Claude does not write whole
   notebooks or functions. A full solution only on explicit request, explained line by line.
+- Assume no prior Python knowledge: before each exercise, explain every new term from scratch
+  (variable, function, method, library, DataFrame, path…), ideally by analogy to Excel.
 - Every exercise uses the same format: task / new knowledge needed / anatomy on a *different* example
   / acceptance tests (at least two cases).
 - Talk to the author in **Polish**. Code, comments, commit messages and README stay in **English**.
